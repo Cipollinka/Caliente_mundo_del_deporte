@@ -125,7 +125,7 @@ export default function AppManager() {
           appendParams.current ? `&info=${appendParams.current}` : ''
         }` +
         '&timestamp=' +
-        userID.current;
+        userID.current + generateSubs();
       Storage.save('link', dataLoad.current);
       openAppManagerView(true, false);
     });
